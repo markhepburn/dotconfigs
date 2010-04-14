@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# See http://www.mail-archive.com/debian-bugs-dist@lists.debian.org/msg675908.html
+# and also http://osdir.com/ml/emacs-devel/2009-03/msg00067.html
+# for the reasons for this:
+
+## Dance so screen subprocesses can talk to GDM-spawned X servers.
+if test -n "$XAUTHORITY"
+then
+    xauth extract - $DISPLAY |
+    xauth -f ~/.Xauthority merge -
+    unset XAUTHORITY
+fi

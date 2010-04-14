@@ -1,0 +1,9 @@
+startup_message off
+
+autodetach on
+
+escape ^zz
+
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.bW}%-Lw%{.rW}%n%f* %t%{-}%+Lw %=%<"
