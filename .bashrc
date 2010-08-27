@@ -154,5 +154,12 @@ function fix_ssh_agent() {
     unset SOCKFILE
 }
 
+function canonicalise {
+    local dirpart=`dirname $1`
+    cd $dirpart && pwd -P
+}
+# used in scripts, so we export this:
+export -f canonicalise
+
 export PATH
 
