@@ -1,11 +1,10 @@
 [user]
 	name = Mark Hepburn
 	email = Mark.Hepburn@gmail.com
-[color]
-	status = auto
-	diff = auto
-	branch = auto
 [alias]
 	st = status
 	ci = commit
 	co = checkout
+	lol = log --pretty=oneline --abbrev-commit --graph --decorate
+[color]
+	ui = auto
