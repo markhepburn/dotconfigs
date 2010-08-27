@@ -123,7 +123,7 @@ if [ -f ~/src/elisp/j/j.sh ]; then
 fi
 
 # "compleat" (http://github.com/mbrubeck/compleat)
-. ~/src/haskell/compleat/compleat_setup
+# . ~/src/haskell/compleat/compleat_setup
 
 # http://www.shellarchive.co.uk/content/emacs_tips.html#export-variables-to-emacs
 function export-emacs {
