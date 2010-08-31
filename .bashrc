@@ -130,7 +130,7 @@ fi
 # . ~/src/haskell/compleat/compleat_setup
 
 # http://www.shellarchive.co.uk/content/emacs_tips.html#export-variables-to-emacs
-function export-emacs {
+function export_emacs {
     if [ "$(emacsclient -e t)" != 't' ]; then
         return 1
     fi
