@@ -104,9 +104,13 @@ if [ -f ~/src/git-1.6.3.1/contrib/completion/git-completion.bash ]; then
 fi
 
 
-# hep016 30/10/07:
-# Make `less' display page location:
-export LESS="-M -R -F -X"
+# options for `less': Respectively, include more detail in the prompt;
+# display colours properly; and just dump output to console rather
+# than paging if it's less than a page (with --quit-if-one-screen/-X
+# being needed to prevent a subsequent redraw erasing the contents
+# again).
+# export LESS="-M -R -F -X"
+export LESS="--LONG-PROMPT --RAW-CONTROL-CHARS --quit-if-one-screen --no-init"
 
 
 # set PATH so it includes user's private bin if it exists
