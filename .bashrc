@@ -99,8 +99,8 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 # hep016 21/04/08; git completion
-if [ -f ~/src/git-1.6.3.1/contrib/completion/git-completion.bash ]; then
-    . ~/src/git-1.6.3.1/contrib/completion/git-completion.bash
+if [ -f ~/bin/git-completion.bash ]; then
+    . ~/bin/git-completion.bash
 fi
 
 
