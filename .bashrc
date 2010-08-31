@@ -106,7 +106,7 @@ fi
 
 # hep016 30/10/07:
 # Make `less' display page location:
-export LESS="-M -R"
+export LESS="-M -R -F"
 
 
 # set PATH so it includes user's private bin if it exists
