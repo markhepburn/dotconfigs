@@ -111,6 +111,7 @@ fi
 # again).
 # export LESS="-M -R -F -X"
 export LESS="--LONG-PROMPT --RAW-CONTROL-CHARS --quit-if-one-screen --no-init"
+export PAGER="/usr/bin/less"
 
 
 # set PATH so it includes user's private bin if it exists
