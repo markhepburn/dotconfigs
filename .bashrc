@@ -121,6 +121,11 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+# locally-installed cabal binaries:
+if [ -d "$HOME/.cabal/bin" ]; then
+    PATH="$HOME/.cabal/bin:$PATH"
+fi
+
 # include oracle client (sqlplus):
 PATH=$PATH:/usr/lib/oracle/xe/app/oracle/product/10.2.0/client/scripts/
 
