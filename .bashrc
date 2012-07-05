@@ -103,6 +103,8 @@ if [ -f ~/bin/git-completion.bash ]; then
     . ~/bin/git-completion.bash
 fi
 
+# Alias for SAP usage; assumes that launch.ica has been downloaded:
+alias sap="/usr/lib/ICAClient/wfica ~/Downloads/launch.ica"
 
 # options for `less': Respectively, include more detail in the prompt;
 # display colours properly; and just dump output to console rather
@@ -140,6 +142,26 @@ function export_emacs {
         emacsclient -e "(setenv \"${name}\" \"${value}\")" >/dev/null
     done
 }
+
+# Integrate bash C-k/y/u with the clipboard (http://stackoverflow.com/a/1088763):
+_xdiscard() {
+    echo -n "${READLINE_LINE:$READLINE_POINT}" | xclip
+    READLINE_LINE="${READLINE_LINE:$READLINE_POINT}"
+    READLINE_POINT=0
+}
+_xkill() {
+    echo -n "${READLINE_LINE:$READLINE_POINT}" | xclip
+    READLINE_LINE="${READLINE_LINE:0:$READLINE_POINT}"
+}
+_xyank() {
+    CLIP=$(xclip -o)
+    COUNT=$(echo -n "$CLIP" | wc -c)
+    READLINE_LINE="${READLINE_LINE:0:$READLINE_POINT}${CLIP}${READLINE_LINE:$READLINE_POINT}"
+    READLINE_POINT=$(($READLINE_POINT + $COUNT))
+}
+bind -m emacs -x '"\C-u": _xdiscard'
+bind -m emacs -x '"\C-k": _xkill'
+bind -m emacs -x '"\C-y": _xyank'
 
 
 function fix_ssh_agent() {
