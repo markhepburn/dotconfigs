@@ -6,6 +6,7 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
+# others: jreese, lukerandall, af-magic, agnoster (powerline)
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -34,3 +35,26 @@ plugins=(git lein command-not-found django extract pip screen)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
+# Alias for SAP usage; assumes that launch.ica has been downloaded:
+alias sap="/usr/lib/ICAClient/wfica ~/Downloads/launch.ica"
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
+
+# options for `less': Respectively, include more detail in the prompt;
+# display colours properly; and just dump output to console rather
+# than paging if it's less than a page (with --quit-if-one-screen/-X
+# being needed to prevent a subsequent redraw erasing the contents
+# again).
+# export LESS="-M -R -F -X"
+export LESS="--LONG-PROMPT --RAW-CONTROL-CHARS --quit-if-one-screen --no-init"
+export PAGER="/usr/bin/less"
+
+# locally-installed cabal binaries:
+if [ -d "$HOME/.cabal/bin" ]; then
+    PATH="$HOME/.cabal/bin:$PATH"
+fi
+
+# include oracle client (sqlplus):
+PATH=$PATH:/usr/lib/oracle/xe/app/oracle/product/10.2.0/client/scripts/
