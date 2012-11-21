@@ -61,4 +61,4 @@ if [ -d "$HOME/.cabal/bin" ]; then
 fi
 
 # include oracle client (sqlplus):
-PATH=$PATH:/usr/lib/oracle/xe/app/oracle/product/10.2.0/client/scripts/
+PATH=$PATH:/opt/oracle/product/11.2.0/client_1/
