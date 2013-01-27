@@ -6,6 +6,7 @@
 	ci = commit
 	co = checkout
 	lol = log --pretty=oneline --abbrev-commit --graph --decorate
+    dlp = diff ORIG_HEAD..FETCH_HEAD
 [color]
 	ui = auto
 
