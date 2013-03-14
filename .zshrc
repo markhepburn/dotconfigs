@@ -38,13 +38,16 @@ plugins=(
     command-not-found
     django
     extract
+    gem
     git
     git-flow
     knife
     lein
     mercurial
+    npm
     pip
     screen
+    vagrant
 )
 
 source $ZSH/oh-my-zsh.sh
