@@ -37,6 +37,7 @@ DISABLE_AUTO_UPDATE="true"
 plugins=(
     command-not-found
     django
+    encode64
     extract
     gem
     git
