@@ -14,3 +14,7 @@
 # http://www.hodique.info/blog/2011/03/20/git_tip_url_rewriting
 [url "git@github.com:markhepburn/"]
     pushInsteadOf = https://github.com/markhepburn/
+
+# http://stevenharman.net/git-pull-with-automatic-rebase
+[branch]
+    autosetuprebase = always
