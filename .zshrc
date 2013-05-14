@@ -56,7 +56,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 # Alias for SAP usage; assumes that launch.ica has been downloaded:
-alias sap="/usr/lib/ICAClient/wfica ~/Downloads/launch.ica"
+alias sap="/opt/Citrix/ICAClient/wfica ~/Downloads/launch.ica"
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
