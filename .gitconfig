@@ -18,3 +18,5 @@
 # http://stevenharman.net/git-pull-with-automatic-rebase
 [branch]
     autosetuprebase = always
+[push]
+	default = matching
