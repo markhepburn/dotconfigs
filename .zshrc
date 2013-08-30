@@ -72,9 +72,6 @@ if [ -d "$HOME/.cabal/bin" ]; then
     PATH="$HOME/.cabal/bin:$PATH"
 fi
 
-# include oracle client (sqlplus):
-PATH=$PATH:/opt/oracle/product/11.2.0/client_1/
-
 # Hacked completion for mosh; just borrow from ssh:
 compdef mosh=ssh
 
