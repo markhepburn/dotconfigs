@@ -36,6 +36,7 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
     command-not-found
+    docker
     django
     encode64
     extract
