@@ -2,4 +2,4 @@
 [roxterm profile]
 cursor_blink_mode=2
 always_show_tabs=0
-font=Consolas 9
+font=Ubuntu Mono derivative Powerline 10
