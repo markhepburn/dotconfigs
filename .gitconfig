@@ -5,7 +5,7 @@
 	st = status
 	ci = commit
 	co = checkout
-	lol = log --pretty=oneline --abbrev-commit --graph --decorate
+	lol = log --pretty=oneline --abbrev-commit --graph --decorate --all
     dlp = diff ORIG_HEAD..FETCH_HEAD
     llp = log ORIG_HEAD..FETCH_HEAD
 [color]
