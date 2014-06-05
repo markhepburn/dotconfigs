@@ -46,7 +46,6 @@ plugins=(
     knife
     lein
     mercurial
-    npm
     pip
     screen
     vagrant
