@@ -20,3 +20,5 @@
     autosetuprebase = always
 [push]
 	default = matching
+[pull]
+	rebase = true
