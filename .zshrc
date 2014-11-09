@@ -47,6 +47,7 @@ plugins=(
     lein
     mercurial
     pip
+    rbenv
     screen
     vagrant
 )
@@ -70,6 +71,12 @@ export PAGER="/usr/bin/less"
 # locally-installed cabal binaries:
 if [ -d "$HOME/.cabal/bin" ]; then
     PATH="$HOME/.cabal/bin:$PATH"
+fi
+
+# rbenv support:
+if [ -d "$HOME/.rbenv/bin" ]; then
+    PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init -)"
 fi
 
 # Hacked completion for mosh; just borrow from ssh:
