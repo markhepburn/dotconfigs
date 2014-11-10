@@ -79,6 +79,11 @@ if [ -d "$HOME/.rbenv/bin" ]; then
     eval "$(rbenv init -)"
 fi
 
+# ChefDK... note that this must appear before rbenv!
+if [ -d "/opt/chefdk/bin" ]; then
+    PATH="/opt/chefdk/bin:$PATH"
+fi
+
 # Hacked completion for mosh; just borrow from ssh:
 compdef mosh=ssh
 
