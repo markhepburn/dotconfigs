@@ -69,9 +69,9 @@ export LESS="--LONG-PROMPT --RAW-CONTROL-CHARS --quit-if-one-screen --no-init"
 export PAGER="/usr/bin/less"
 
 # locally-installed cabal binaries:
-# if [ -d "$HOME/.cabal/bin" ]; then
-#     PATH="$HOME/.cabal/bin:$PATH"
-# fi
+if [ -d "$HOME/.cabal/bin" ]; then
+    PATH="$HOME/.cabal/bin:$PATH"
+fi
 
 # rbenv support:
 if [ -d "$HOME/.rbenv/bin" ]; then
