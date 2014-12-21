@@ -73,11 +73,11 @@ if [ -d "$HOME/.cabal/bin" ]; then
     PATH="$HOME/.cabal/bin:$PATH"
 fi
 
-# rbenv support:
-if [ -d "$HOME/.rbenv/bin" ]; then
-    PATH="$HOME/.rbenv/bin:$PATH"
-    eval "$(rbenv init -)"
-fi
+# rbenv support (installed via rbenv zsh plugin; will leave commented for now):
+# if [ -d "$HOME/.rbenv/bin" ]; then
+#     PATH="$HOME/.rbenv/bin:$PATH"
+#     eval "$(rbenv init -)"
+# fi
 
 # ChefDK... note that this must appear before rbenv!
 if [ -d "/opt/chefdk/bin" ]; then
