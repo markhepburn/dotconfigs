@@ -68,6 +68,9 @@ source $ZSH/oh-my-zsh.sh
 export LESS="--LONG-PROMPT --RAW-CONTROL-CHARS --quit-if-one-screen --no-init"
 export PAGER="/usr/bin/less"
 
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
 # locally-installed cabal binaries:
 if [ -d "$HOME/.cabal/bin" ]; then
     PATH="$HOME/.cabal/bin:$PATH"
