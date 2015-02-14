@@ -21,6 +21,10 @@
                      (require 'spyscope.core)                    ; debugging, tracing, etc
                      (require '[clojure.tools.namespace.repl :refer [refresh]]) ; smarter code reloading
 
+                     ;; Prettier pretty-printing (see also, cider-repl-use-pretty-printing)
+                     (alter-var-root #'clojure.pprint/pprint
+                                     (constantly @#'aprint.core/aprint))
+
                      (require '[vinyasa.inject :as inject])
                      (inject/in
                       ;; note that `:refer, :all and :exclude can be used
