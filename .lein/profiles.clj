@@ -6,7 +6,7 @@
                   ;; [lein-midje-doc "0.0.18"] ; conflicts with cider-nrepl 0.9.0-snapshot, via rewrite_clj
                   [lein-simpleton "1.3.0"] ; serve up a directory
                   [codox "0.6.6"]
-                  [refactor-nrepl "1.0.1"]
+                  [refactor-nrepl "1.0.5"]
                   ]
 
         :dependencies [[aprint "0.1.0"]
