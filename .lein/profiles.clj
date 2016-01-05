@@ -1,5 +1,5 @@
 ;;; http://z.caudate.me/give-your-clojure-workflow-more-flow/
-{:user {:plugins [[cider/cider-nrepl "0.9.0"]
+{:repl {:plugins [[cider/cider-nrepl "0.9.0"]
                   [lein-try "0.3.2"]
                   [lein-pprint "1.1.1"]
                   [lein-midje    "3.1.3"]
