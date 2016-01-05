@@ -1,12 +1,12 @@
 ;;; http://z.caudate.me/give-your-clojure-workflow-more-flow/
-{:user {:plugins [[cider/cider-nrepl "0.9.0-SNAPSHOT"]
+{:user {:plugins [[cider/cider-nrepl "0.9.0"]
                   [lein-try "0.3.2"]
                   [lein-pprint "1.1.1"]
                   [lein-midje    "3.1.3"]
                   ;; [lein-midje-doc "0.0.18"] ; conflicts with cider-nrepl 0.9.0-snapshot, via rewrite_clj
                   [lein-simpleton "1.3.0"] ; serve up a directory
                   [codox "0.6.6"]
-                  [refactor-nrepl "1.0.5"]
+                  [refactor-nrepl "1.1.0-SNAPSHOT"]
                   ]
 
         :dependencies [[aprint "0.1.0"]
