@@ -20,3 +20,5 @@
 #     autosetuprebase = always
 [push]
 	default = matching
+[include]
+    path = ~/.gitconfig.private
