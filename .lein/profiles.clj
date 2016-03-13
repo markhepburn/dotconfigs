@@ -12,7 +12,8 @@
                        [spyscope "0.1.5"]
                        [org.clojure/tools.namespace "0.2.8"]
                        [leiningen #=(leiningen.core.main/leiningen-version)]
-                       [im.chit/vinyasa "0.2.2"]
+                       [alembic "0.3.2"]
+                       [im.chit/vinyasa "0.4.2"]
                        ]
 
         :injections [(require '[aprint.core :refer [aprint ap]]) ; prettier printing
@@ -30,12 +31,22 @@
                      (inject/in
                       ;; note that `:refer, :all and :exclude can be used
                       [vinyasa.inject :refer [inject [in inject-in]]]
-                      [vinyasa.lein :all]
-                      [vinyasa.pull :all]
+                      [vinyasa.lein :exclude [*project*]]
+
+                      ;; imports all functions in vinyasa.pull
+                      [alembic.still [distill pull]]
+
+                      ;; inject into clojure.core
+                      clojure.core
+                      [vinyasa.reflection .> .? .* .% .%> .& .>ns .>var]
 
                       clojure.core [clojure.tools.namespace.repl refresh]
                       ;; clojure.core [clojure.repl apropos dir doc find-doc source]
-                      )
+
+                       ;; inject into clojure.core with prefix
+                      clojure.core >
+                      [clojure.pprint pprint]
+                      [clojure.java.shell sh])
 
                      ]
         }}
