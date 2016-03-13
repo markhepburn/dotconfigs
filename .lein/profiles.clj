@@ -1,6 +1,5 @@
 ;;; http://z.caudate.me/give-your-clojure-workflow-more-flow/
-{:repl {:plugins [[cider/cider-nrepl "0.10.1"]
-                  [lein-try "0.3.2"]
+{:repl {:plugins [[lein-try "0.3.2"]
                   [lein-pprint "1.1.1"]
                   [lein-midje    "3.1.3"]
                   ;; [lein-midje-doc "0.0.18"] ; conflicts with cider-nrepl 0.9.0-snapshot, via rewrite_clj
@@ -12,7 +11,6 @@
         :dependencies [[aprint "0.1.0"]
                        [spyscope "0.1.5"]
                        [org.clojure/tools.namespace "0.2.8"]
-                       [org.clojure/tools.nrepl "0.2.12"]
                        [leiningen #=(leiningen.core.main/leiningen-version)]
                        [im.chit/vinyasa "0.2.2"]
                        ]
