@@ -36,6 +36,8 @@ export WORKON_HOME=~/.virtualenvs
 mkdir -p $WORKON_HOME
 PATH="/usr/share/virtualenvwrapper/:$PATH"
 
+alias mkvirtualenv3="mkvirtualenv --python=`which python3`"
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
