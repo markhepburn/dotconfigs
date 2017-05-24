@@ -53,6 +53,7 @@ plugins=(
     knife
     lein
     mercurial
+    mosh
     pip
     rbenv
     screen
@@ -95,8 +96,5 @@ fi
 if [ -d "/opt/chefdk/bin" ]; then
     PATH="/opt/chefdk/bin:$PATH"
 fi
-
-# Hacked completion for mosh; just borrow from ssh:
-compdef mosh=ssh
 
 export TERM=xterm-256color
