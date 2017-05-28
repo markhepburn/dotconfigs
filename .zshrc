@@ -42,6 +42,7 @@ alias mkvirtualenv3="mkvirtualenv --python=`which python3`"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
+    aws
     command-not-found
     docker
     django
@@ -103,3 +104,12 @@ if [ -d "/opt/chefdk/bin" ]; then
 fi
 
 export TERM=xterm-256color
+
+export ANDROID_HOME="$HOME/Condense/android-sdk-linux"
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+export NVM_DIR="/home/mark/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export GOPATH=~/src/gopath
+export PATH=$GOPATH:$GOPATH/bin:$PATH
+
