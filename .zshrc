@@ -44,8 +44,8 @@ alias mkvirtualenv3="mkvirtualenv --python=`which python3`"
 plugins=(
     aws
     command-not-found
-    docker
     django
+    docker
     encode64
     extract
     gem
