@@ -113,3 +113,11 @@ export NVM_DIR="/home/mark/.nvm"
 export GOPATH=~/src/gopath
 export PATH=$GOPATH:$GOPATH/bin:$PATH
 
+chpwd_source_vars() {
+    if [[ -s "$PWD/.set_env" ]] ; then
+        source "$PWD/.set_env"
+    fi
+}
+chpwd_functions=(${chpwd_functions[@]} "chpwd_source_vars")
+
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
