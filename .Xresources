@@ -1,7 +1,8 @@
 urxvt*scrollBar:	false
 URxvt*termName: rxvt-256color
 URxvt*xftAntialias: true
-URxvt*font:xft:inconsolata:size=8
+URxvt*font: xft:Inconsolata:size=8,xft:Inconsolata for Powerline:size=8
+!URxvt*font:xft:inconsolata:size=8
 URxvt*background: #3f3f3f
 URxvt*foreground: #dcdccc
 URxvt*cursorColor: #aaaaaa
@@ -25,3 +26,10 @@ URxvt*color14: #93e0e3
 URxvt*color15: #ffffff
 emacs.font:Ubuntu Mono:pixelsize=16:antialias=true
 !emacs.font:-microsoft-Consolas-normal-normal-normal-*-15-*-*-*-m-0-iso10646-1
+Xft.dpi: 180
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
