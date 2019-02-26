@@ -1,15 +1,15 @@
 [user]
-	name = Mark Hepburn
-	email = Mark.Hepburn@gmail.com
+    name = Mark Hepburn
+    email = Mark.Hepburn@gmail.com
 [alias]
-	st = status
-	ci = commit
-	co = checkout
-	lol = log --pretty=oneline --abbrev-commit --graph --decorate --all
+    st = status
+    ci = commit
+    co = checkout
+    lol = log --pretty=oneline --abbrev-commit --graph --decorate --all
     dlp = diff ORIG_HEAD..FETCH_HEAD
     llp = log ORIG_HEAD..FETCH_HEAD
 [color]
-	ui = auto
+    ui = auto
 
 # http://www.hodique.info/blog/2011/03/20/git_tip_url_rewriting
 [url "git@github.com:markhepburn/"]
@@ -19,6 +19,6 @@
 # [branch]
 #     autosetuprebase = always
 [push]
-	default = matching
+    default = matching
 [include]
     path = ~/.gitconfig.private
