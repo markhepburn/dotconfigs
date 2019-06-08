@@ -113,8 +113,15 @@ fi
 
 export TERM=xterm-256color
 
-export ANDROID_HOME="$HOME/Condense/android-sdk-linux"
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+if [ -d "$HOME/Vendor/Android/Sdk"]; then
+    export ANDROID_HOME="$HOME/Vendor/Android/Sdk"
+    export PATH=$PATH:$ANDROID_HOME/tools
+    export PATH=$PATH:$ANDROID_HOME/platform-tools
+fi
+
+if [ -d "$HOME/Vendor/flutter" ]; then
+    export PATH="$PATH:$HOME/Vendor/flutter/bin"
+fi
 
 export NVM_DIR="/home/mark/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
