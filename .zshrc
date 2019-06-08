@@ -48,15 +48,18 @@ plugins=(
     docker
     encode64
     extract
+    fd
     gem
     git
     git-flow
+    httpie
     knife
     lein
     mercurial
     mosh
     pip
     rbenv
+    ripgrep
     screen
     vagrant
     virtualenv
