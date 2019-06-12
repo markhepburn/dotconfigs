@@ -558,3 +558,15 @@ key_bindings:
   - { key: F11,      mods: Super,   chars: "\x1b[23;3~"                      }
   - { key: F12,      mods: Super,   chars: "\x1b[24;3~"                      }
   - { key: NumpadEnter,             chars: "\n"                              }
+  # Emacs emulation, etc: Alt conflicts with xmonad, but windows/meta
+  # sends Super apparently:
+  - { key: Period,   mods: Super,       chars: "\x1b."                       }
+  - { key: Period,   mods: Super|Shift, chars: "\x1b>"                       }
+  - { key: Comma,    mods: Super|Shift, chars: "\x1b<"                       }
+  - { key: Semicolon, mods: Super,      chars: "\x1b;"                       }
+  - { key: D,        mods: Super,       chars: "\x1bd"                       }
+  - { key: B,        mods: Super,       chars: "\x1bb"                       }
+  - { key: F,        mods: Super,       chars: "\x1bf"                       }
+  - { key: T,        mods: Super,       chars: "\x1bt"                       }
+  - { key: X,        mods: Super,       chars: "\x1bx"                       }
+
