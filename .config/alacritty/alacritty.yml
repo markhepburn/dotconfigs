@@ -569,4 +569,6 @@ key_bindings:
   - { key: F,        mods: Super,       chars: "\x1bf"                       }
   - { key: T,        mods: Super,       chars: "\x1bt"                       }
   - { key: X,        mods: Super,       chars: "\x1bx"                       }
-
+  # Copy / Paste
+  - { key: C,        mods: Shift,   action: Copy                             }
+  - { key: V,        mods: Shift,   action: Paste                            }
