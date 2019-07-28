@@ -581,6 +581,7 @@ key_bindings:
   - { key: Period,   mods: Super|Shift, chars: "\x1b>"                       }
   - { key: Comma,    mods: Super|Shift, chars: "\x1b<"                       }
   - { key: Semicolon, mods: Super,      chars: "\x1b;"                       }
+  - { key: Back,     mods: Super,       chars: "\x1b\x7f"                    }
   - { key: D,        mods: Super,       chars: "\x1bd"                       }
   - { key: B,        mods: Super,       chars: "\x1bb"                       }
   - { key: F,        mods: Super,       chars: "\x1bf"                       }
