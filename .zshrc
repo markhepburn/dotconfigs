@@ -57,6 +57,8 @@ plugins=(
     lein
     mercurial
     mosh
+    node
+    nvm
     pip
     rbenv
     ripgrep
@@ -124,8 +126,6 @@ if [ -d "$HOME/Vendor/flutter" ]; then
     export PATH="$PATH:$HOME/Vendor/flutter/bin"
 fi
 
-export NVM_DIR="/home/mark/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 export GOPATH=~/src/gopath
 export PATH=$GOPATH:$GOPATH/bin:$PATH
 
