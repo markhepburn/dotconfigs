@@ -61,6 +61,7 @@ plugins=(
     rbenv
     ripgrep
     screen
+    thefuck
     vagrant
     virtualenv
     virtualenvwrapper
