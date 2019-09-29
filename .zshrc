@@ -56,6 +56,7 @@ plugins=(
     knife
     lein
     mercurial
+    mix
     mosh
     node
     nvm
