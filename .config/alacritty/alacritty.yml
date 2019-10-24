@@ -582,10 +582,12 @@ key_bindings:
   - { key: Comma,    mods: Super|Shift, chars: "\x1b<"                       }
   - { key: Semicolon, mods: Super,      chars: "\x1b;"                       }
   - { key: Back,     mods: Super,       chars: "\x1b\x7f"                    }
+  - { key: C,        mods: Super,       chars: "\x1bc"                       }
   - { key: D,        mods: Super,       chars: "\x1bd"                       }
   - { key: B,        mods: Super,       chars: "\x1bb"                       }
   - { key: F,        mods: Super,       chars: "\x1bf"                       }
   - { key: T,        mods: Super,       chars: "\x1bt"                       }
+  - { key: U,        mods: Super,       chars: "\x1bu"                       }
   - { key: X,        mods: Super,       chars: "\x1bx"                       }
   # Copy / Paste
   - { key: C,        mods: Control|Shift,   action: Copy                     }
