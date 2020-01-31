@@ -138,4 +138,9 @@ chpwd_source_vars() {
 }
 chpwd_functions=(${chpwd_functions[@]} "chpwd_source_vars")
 
+# CDPATH: https://superuser.com/questions/265547/zsh-cdpath-and-autocompletion
+if [ -d "$HOME/Projects/" ]; then
+    cdpath=(. ~/Projects/)
+fi
+
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
