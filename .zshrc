@@ -46,6 +46,7 @@ plugins=(
     command-not-found
     django
     docker
+    dotnet
     encode64
     extract
     fd
