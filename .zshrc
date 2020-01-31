@@ -143,4 +143,8 @@ if [ -d "$HOME/Projects/" ]; then
     cdpath=(. ~/Projects/)
 fi
 
+# https://superuser.com/a/286713
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*:descriptions' format %S%d%s
+
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
