@@ -44,6 +44,7 @@ alias mkvirtualenv3="mkvirtualenv --python=`which python3`"
 plugins=(
     aws
     command-not-found
+    direnv
     django
     docker
     dotnet
