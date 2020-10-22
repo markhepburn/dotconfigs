@@ -123,7 +123,8 @@ fi
 export TERM=xterm-256color
 
 if [ -d "$HOME/Vendor/Android/Sdk" ]; then
-    export ANDROID_HOME="$HOME/Vendor/Android/Sdk"
+    export ANDROID_HOME="$HOME/Vendor/Android/Sdk" # Deprecated now
+    export ANDROID_SDK_ROOT="$ANDROID_HOME"
     export PATH=$PATH:$ANDROID_HOME/tools
     export PATH=$PATH:$ANDROID_HOME/platform-tools
 fi
