@@ -49,6 +49,7 @@ plugins=(
     docker
     dotnet
     encode64
+    exercism                    # in custom/ directory
     extract
     fd
     gem
