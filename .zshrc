@@ -31,6 +31,8 @@ DISABLE_AUTO_UPDATE="true"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
 
+if [ -e /home/mark/.nix-profile/etc/profile.d/nix.sh ]; then . /home/mark/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
 # virtualenvwrapper integration; plugin doesn't work on its own (fails sourcing bash completion):
 export WORKON_HOME=~/.virtualenvs
 mkdir -p $WORKON_HOME
@@ -151,4 +153,3 @@ zstyle ':completion:*:descriptions' format %S%d%s
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
-if [ -e /home/mark/.nix-profile/etc/profile.d/nix.sh ]; then . /home/mark/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
