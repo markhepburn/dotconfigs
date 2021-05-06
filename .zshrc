@@ -45,6 +45,7 @@ alias mkvirtualenv3="mkvirtualenv --python=`which python3`"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
     aws
+    asdf
     command-not-found
     direnv
     django
@@ -64,9 +65,7 @@ plugins=(
     mix
     mosh
     node
-    nvm
     pip
-    rbenv
     ripgrep
     screen
     thefuck
@@ -109,13 +108,7 @@ if [ -d "$HOME/.cabal/bin" ]; then
     PATH="$HOME/.cabal/bin:$PATH"
 fi
 
-# rbenv support (installed via rbenv zsh plugin; will leave commented for now):
-# if [ -d "$HOME/.rbenv/bin" ]; then
-#     PATH="$HOME/.rbenv/bin:$PATH"
-#     eval "$(rbenv init -)"
-# fi
-
-# ChefDK... note that this must appear before rbenv!
+# ChefDK
 if [ -d "/opt/chefdk/bin" ]; then
     PATH="/opt/chefdk/bin:$PATH"
 fi
@@ -153,4 +146,3 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:*:descriptions' format %S%d%s
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
-
