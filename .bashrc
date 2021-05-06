@@ -121,6 +121,11 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+# pip --user, etc:
+if [ -d "$HOME/.local/bin" ]; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
 # locally-installed cabal binaries:
 if [ -d "$HOME/.cabal/bin" ]; then
     PATH="$HOME/.cabal/bin:$PATH"
