@@ -61,6 +61,7 @@ plugins=(
     exercism                    # in custom/ directory
     extract
     fd
+    fzf
     git
     git-flow
     httpie
