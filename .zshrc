@@ -82,6 +82,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Fix the ctrl-T binding in favour of the existing one:
+bindkey "^T" transpose-chars
+
 # Customize to your needs...
 
 # make less more friendly for non-text input files, see lesspipe(1)
