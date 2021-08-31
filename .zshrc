@@ -82,6 +82,9 @@ plugins=(
     virtualenvwrapper
 )
 
+# https://megamorf.gitlab.io/2021/04/21/add-zsh-autocompletion-to-bitwarden-cli/
+eval "$(bw completion --shell zsh); compdef _bw bw;"
+
 source $ZSH/oh-my-zsh.sh
 
 # Fix the ctrl-T binding in favour of the existing one:
