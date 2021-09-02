@@ -20,3 +20,7 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+export PATH
+. "$HOME/.cargo/env"
+[ -f "/home/mark/.ghcup/env" ] && source "/home/mark/.ghcup/env" # ghcup-env

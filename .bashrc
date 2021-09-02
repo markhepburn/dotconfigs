@@ -115,7 +115,6 @@ alias sap="/usr/lib/ICAClient/wfica ~/Downloads/launch.ica"
 export LESS="--LONG-PROMPT --RAW-CONTROL-CHARS --quit-if-one-screen --no-init"
 export PAGER="/usr/bin/less"
 
-
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
@@ -173,7 +172,6 @@ bind -m emacs -x '"\C-u": _xdiscard'
 bind -m emacs -x '"\C-k": _xkill'
 bind -m emacs -x '"\C-y": _xyank'
 
-
 function fix_ssh_agent() {
     SSHAGENTPID=`ps -eo pid,cmd | grep ssh-agent | grep -v grep |sed 's/^ *//' | cut -f1 -d' '`
     if [ -z "$SSHAGENTPID" ]; then
@@ -199,4 +197,4 @@ function canonicalise {
 export -f canonicalise
 
 export PATH
-
+. "$HOME/.cargo/env"
