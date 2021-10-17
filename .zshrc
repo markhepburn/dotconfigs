@@ -79,6 +79,7 @@ plugins=(
     vagrant
     virtualenv
     virtualenvwrapper
+    zsh-aliases-exa
 )
 
 # https://megamorf.gitlab.io/2021/04/21/add-zsh-autocompletion-to-bitwarden-cli/
