@@ -54,7 +54,6 @@ plugins=(
     asdf
     command-not-found
     direnv
-    django
     docker
     dotnet
     encode64
