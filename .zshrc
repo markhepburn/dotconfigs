@@ -87,6 +87,11 @@ eval "$(bw completion --shell zsh); compdef _bw bw;"
 
 source $ZSH/oh-my-zsh.sh
 
+# Enable loading of bash-style autocomplete:
+autoload -U +X bashcompinit && bashcompinit
+
+source /etc/bash_completion.d/azure-cli
+
 # Fix the ctrl-T binding in favour of the existing one:
 bindkey "^T" transpose-chars
 
