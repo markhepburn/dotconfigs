@@ -155,6 +155,12 @@ chpwd_source_vars() {
 }
 chpwd_functions=(${chpwd_functions[@]} "chpwd_source_vars")
 
+# https://github.com/natethinks/jog
+# See `man zshcontrib` for details
+function zshaddhistory() {
+	echo "${1%%$'\n'}|${PWD}   " >> ~/.zsh_history_ext
+}
+
 # # CDPATH: https://superuser.com/questions/265547/zsh-cdpath-and-autocompletion
 # if [ -d "$HOME/Projects/" ]; then
 #     cdpath=(. ~/Projects/)
