@@ -5,4 +5,5 @@ ruby 2.5.0
 sbcl 2.1.4
 bazel 3.1.0
 direnv 2.28.0
-GoHugo 0.83.1
+GoHugo 0.88.1
+docker-compose 1.29.2
