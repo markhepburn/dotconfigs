@@ -113,6 +113,8 @@ export PAGER="/usr/bin/less"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
+alias ip='ip --color'
+
 # Custom scripts:
 if [ -d "$HOME/bin" ]; then
     PATH="$HOME/bin:$PATH"
