@@ -1,0 +1,39 @@
+!! Currently working:
+!! xmodmap:  up to 3 keys per modifier, (keycodes in parentheses):
+
+!! shift       Shift_L (0x32),  Shift_R (0x3e)
+!! lock
+!! control     Control_L (0x25),  Control_L (0x42),  Control_R (0x69)
+!! mod1        Alt_L (0x40),  Alt_R (0x6c)
+!! mod2        Num_Lock (0x4d)
+!! mod3        Super_L (0xce),  Hyper_L (0xcf)
+!! mod4        Meta_L (0x85),  Meta_L (0xcd)
+!! mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)
+
+!! Also set keycodes 206,207 to Super_L, Hyper_L
+
+!! https://www.reddit.com/r/emacs/comments/rr330u/weekly_tips_tricks_c_thread/hrlq4b3/?context=3
+!! https://protesilaos.com/codelog/2019-10-10-debian-xmodmap/
+
+!! clear lock
+clear mod3
+clear mod4
+clear control
+
+!! Use default Control_L keycode
+add control = Control_L
+
+!! Set Caps Lock key as left Control
+keycode 66 = Control_L
+!! Use additional Control_L
+add control = Control_L
+
+!! Assign Hyper and Super to unused keycodes:
+keycode 206 = Hyper_R
+keycode 207 = Super_L
+
+!! mod3 to Hyper, and Super:
+add mod3 = Hyper_L Hyper_R
+add mod3 = Super_L Super_R
+!! Meta on its own on mod4:
+add mod4 = Meta_L
