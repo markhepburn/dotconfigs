@@ -15,25 +15,37 @@
 !! https://www.reddit.com/r/emacs/comments/rr330u/weekly_tips_tricks_c_thread/hrlq4b3/?context=3
 !! https://protesilaos.com/codelog/2019-10-10-debian-xmodmap/
 
-!! clear lock
+clear lock
+clear mod1
 clear mod3
 clear mod4
 clear control
 
+!! Restore Alt (was on mod1, along with meta_l sometimes):
+add mod1 = Alt_L
+add mod1 = Alt_R
+
 !! Use default Control_L keycode
 add control = Control_L
+
+!! Ensure that we don't have Meta on the Alt key as well:
+keycode 64 = Alt_L
 
 !! Set Caps Lock key as left Control
 keycode 66 = Control_L
 !! Use additional Control_L
 add control = Control_L
+add control = Control_R
+
+keycode 133 = Meta_L
 
 !! Assign Hyper and Super to unused keycodes:
 keycode 206 = Hyper_R
 keycode 207 = Super_L
 
-!! mod3 to Hyper, and Super:
+!! mod3 to Hyper and Super:
 add mod3 = Hyper_L Hyper_R
 add mod3 = Super_L Super_R
+
 !! Meta on its own on mod4:
 add mod4 = Meta_L
