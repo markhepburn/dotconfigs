@@ -73,7 +73,6 @@ plugins=(
     pip
     ripgrep
     rust
-    rustup
     screen
     thefuck
     vagrant
