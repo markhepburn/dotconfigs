@@ -18,6 +18,8 @@
 # http://stevenharman.net/git-pull-with-automatic-rebase
 # [branch]
 #     autosetuprebase = always
+[pull]
+    rebase = false              # default merge instead of rebase
 [push]
     default = matching
 [include]
