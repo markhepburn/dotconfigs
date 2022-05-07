@@ -1,0 +1,5 @@
+^/README.*
+^/LICENCE*
+^/Makefile
+\.git
+\.gitignore
