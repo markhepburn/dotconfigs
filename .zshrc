@@ -177,3 +177,9 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [ -f "/home/mark/.ghcup/env" ] && source "/home/mark/.ghcup/env" # ghcup-env
+
+# Option: replace docker with (root-less) podman
+# Ref https://codepre.com/en/use-docker-compose-con-podman-para-orquestar-contenedores-en-fedora-linux.html
+# alias docker=podman
+# for docker-compose:
+# export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock
