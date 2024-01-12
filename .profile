@@ -31,3 +31,6 @@ export PATH
 [ -f "/home/mark/.ghcup/env" ] && source "/home/mark/.ghcup/env" # ghcup-env
 
 export SSH_AUTH_SOCK=/run/user/$UID/keyring/ssh
+
+# for Emacs:
+export LD_LIBRARY_PATH=~/Projects/tree-sitter
