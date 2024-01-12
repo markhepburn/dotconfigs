@@ -1,7 +1,4 @@
-dynamic_title = true
-enable_experimental_conpty_backend = false
 live_config_reload = true
-tabspaces = 8
 
 [colors]
 draw_bold_text_with_bright_colors = true
@@ -66,7 +63,6 @@ unfocused_hollow = true
 log_level = "Warn"
 persistent_logging = false
 print_events = false
-ref_test = false
 render_timer = false
 
 [font]
@@ -676,25 +672,13 @@ hide_when_typing = false
 action = "PasteSelection"
 mouse = "Middle"
 
-[mouse.double_click]
-threshold = 300
-
-[mouse.triple_click]
-threshold = 300
-
 [scrolling]
-auto_scroll = false
 history = 10000
 multiplier = 3
 
 [selection]
 save_to_clipboard = false
 semantic_escape_chars = ",│`|:\"' ()[]{}<>"
-
-[visual_bell]
-animation = "EaseOutExpo"
-color = "0xffffff"
-duration = 0
 
 [window]
 decorations = "none"
