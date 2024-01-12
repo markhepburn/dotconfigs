@@ -83,6 +83,8 @@ tabspaces: 8
 
 # Font configuration (changes require restart)
 font:
+  normal:
+    family: "CasKaydiaCove Nerd Font"
   # Normal (roman) font face
   #normal:
     # Font family
