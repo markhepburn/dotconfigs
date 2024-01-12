@@ -70,14 +70,12 @@ plugins=(
     httpie
     knife
     lein
-    mercurial
     mix
     mosh
     node
     pip
     ripgrep
     rust
-    screen
     thefuck
     vagrant
     virtualenv
