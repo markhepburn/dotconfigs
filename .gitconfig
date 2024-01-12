@@ -28,6 +28,10 @@
 [core]
     excludesfile = ~/.gitignore
     attributesfile = ~/.gitattributes
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
 [diff "common-lisp"]
     xfuncname="^\\((def\\S+\\s+\\S+)"
     
@@ -35,3 +39,4 @@
     xfuncname="^\\((((def\\S+)|use-package)\\s+\\S+)"
 
 [github]
+	user = markhepburn
