@@ -1,1 +1,1 @@
-. "$HOME/.cargo/env"
+. "$HOME/.ghcup/env"

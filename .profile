@@ -27,7 +27,6 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 export PATH
-. "$HOME/.cargo/env"
 [ -f "/home/mark/.ghcup/env" ] && source "/home/mark/.ghcup/env" # ghcup-env
 
 export SSH_AUTH_SOCK=/run/user/$UID/keyring/ssh
