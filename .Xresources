@@ -25,7 +25,7 @@ URxvt*color13: #dc8cc3
 URxvt*color14: #93e0e3
 URxvt*color15: #ffffff
 ! emacs.font:Ubuntu Mono:pixelsize=16:antialias=true
-emacs.font:Cascadia Code PL:pixelsize=16:antialias=true:style=normal
+!emacs.font:Cascadia Code PL:pixelsize=16:antialias=true:style=normal
 ! emacs.font:JetBrains Mono:pixelsize=16:antialias=true
 !emacs.font:-microsoft-Consolas-normal-normal-normal-*-15-*-*-*-m-0-iso10646-1
 Xft.dpi: 180
