@@ -86,7 +86,8 @@ plugins=(
 )
 
 # https://megamorf.gitlab.io/2021/04/21/add-zsh-autocompletion-to-bitwarden-cli/
-eval "$(bw completion --shell zsh); compdef _bw bw;"
+# Disabled because it takes ages to run!
+# eval "$(bw completion --shell zsh); compdef _bw bw;"
 
 source $ZSH/oh-my-zsh.sh
 
