@@ -70,6 +70,7 @@ plugins=(
     jq                          # https://github.com/reegnz/jq-zsh-plugin
     knife
     lein
+    mise
     mix
     mosh
     node
