@@ -229,4 +229,5 @@ atuin-setup() {
     zle -N fzf-atuin-history-widget
     bindkey '^R' fzf-atuin-history-widget
 }
-atuin-setup
+# atuin-setup
+eval "$(atuin init zsh)"
