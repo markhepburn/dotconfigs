@@ -133,11 +133,6 @@ if [ -d "$HOME/.cabal/bin" ]; then
     PATH="$HOME/.cabal/bin:$PATH"
 fi
 
-# ChefDK
-if [ -d "/opt/chefdk/bin" ]; then
-    PATH="/opt/chefdk/bin:$PATH"
-fi
-
 export TERM=xterm-256color
 
 if [ -d "$HOME/Vendor/Android/Sdk" ]; then
