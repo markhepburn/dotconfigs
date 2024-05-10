@@ -118,6 +118,8 @@ alias pbpaste='xclip -selection clipboard -o'
 
 alias ip='ip --color'
 
+alias bat=batcat                # bat is in apt now, but renamed to avoid a conflict
+
 # Custom scripts:
 if [ -d "$HOME/bin" ]; then
     PATH="$HOME/bin:$PATH"
