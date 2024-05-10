@@ -1,12 +1,11 @@
+# OVERVIEW: This should mostly be ohmyzsh plugins, aliases, and other settings.
+# Environment variables should mostly go in .zprofile
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-if [[ -r "$HOME/.zshprofile" ]]; then
-  source "$HOME/.zshprofile"
 fi
 
 # Path to your oh-my-zsh configuration.
@@ -120,37 +119,6 @@ alias ip='ip --color'
 
 alias bat=batcat                # bat is in apt now, but renamed to avoid a conflict
 
-# Custom scripts:
-if [ -d "$HOME/bin" ]; then
-    PATH="$HOME/bin:$PATH"
-fi
-
-# pip --user, etc:
-if [ -d "$HOME/.local/bin" ]; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
-# locally-installed cabal binaries:
-if [ -d "$HOME/.cabal/bin" ]; then
-    PATH="$HOME/.cabal/bin:$PATH"
-fi
-
-export TERM=xterm-256color
-
-if [ -d "$HOME/Vendor/Android/Sdk" ]; then
-    export ANDROID_HOME="$HOME/Vendor/Android/Sdk" # Deprecated now
-    export ANDROID_SDK_ROOT="$ANDROID_HOME"
-    export PATH=$PATH:$ANDROID_HOME/tools
-    export PATH=$PATH:$ANDROID_HOME/platform-tools
-fi
-
-if [ -d "$HOME/Vendor/flutter" ]; then
-    export PATH="$PATH:$HOME/Vendor/flutter/bin"
-fi
-
-export GOPATH=~/src/gopath
-export PATH=$GOPATH:$GOPATH/bin:$PATH
-
 chpwd_source_vars() {
     if [[ -s "$PWD/.set_env" ]] ; then
         source "$PWD/.set_env"
@@ -158,11 +126,11 @@ chpwd_source_vars() {
 }
 chpwd_functions=(${chpwd_functions[@]} "chpwd_source_vars")
 
-# https://github.com/natethinks/jog
-# See `man zshcontrib` for details
-function zshaddhistory() {
-	echo "${1%%$'\n'}|${PWD}   " >> ~/.zsh_history_ext
-}
+# # https://github.com/natethinks/jog
+# # See `man zshcontrib` for details
+# function zshaddhistory() {
+# 	echo "${1%%$'\n'}|${PWD}   " >> ~/.zsh_history_ext
+# }
 
 # # CDPATH: https://superuser.com/questions/265547/zsh-cdpath-and-autocompletion
 # if [ -d "$HOME/Projects/" ]; then
@@ -173,11 +141,9 @@ function zshaddhistory() {
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*:descriptions' format %S%d%s
 
-export DOTNET_CLI_TELEMETRY_OPTOUT=1
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-[ -f "/home/mark/.ghcup/env" ] && source "/home/mark/.ghcup/env" # ghcup-env
+# [ -f "/home/mark/.ghcup/env" ] && source "/home/mark/.ghcup/env" # ghcup-env
 
 # Option: replace docker with (root-less) podman
 # Ref https://codepre.com/en/use-docker-compose-con-podman-para-orquestar-contenedores-en-fedora-linux.html
