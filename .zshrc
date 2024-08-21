@@ -61,7 +61,6 @@ plugins=(
     dotnet
     encode64
     extract
-    fd
     fzf
     git
     git-flow
@@ -74,7 +73,6 @@ plugins=(
     mosh
     node
     pip
-    ripgrep
     rust
     thefuck
     vagrant
