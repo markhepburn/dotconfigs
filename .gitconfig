@@ -40,3 +40,6 @@
 
 [github]
 	user = markhepburn
+[credential]
+# cd /usr/share/doc/git/contrib/credential/libsecret/; sudo make
+	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
