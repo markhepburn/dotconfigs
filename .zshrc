@@ -116,6 +116,7 @@ alias pbpaste='xclip -selection clipboard -o'
 alias ip='ip --color'
 
 alias bat=batcat                # bat is in apt now, but renamed to avoid a conflict
+alias cat=bat
 
 chpwd_source_vars() {
     if [[ -s "$PWD/.set_env" ]] ; then
