@@ -148,7 +148,7 @@ zstyle ':completion:*:descriptions' format %S%d%s
 # Ref https://codepre.com/en/use-docker-compose-con-podman-para-orquestar-contenedores-en-fedora-linux.html
 # alias docker=podman
 # for docker-compose:
-# export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock
+export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock
 
 EAT_SHELL_INTEGRATION_DIR=$(ls -d ~/.emacs.d/elpa/eat-*/integration)
 [ -n "$EAT_SHELL_INTEGRATION_DIR" ] && \
