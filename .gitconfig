@@ -28,6 +28,7 @@
 [core]
     excludesfile = ~/.gitignore
     attributesfile = ~/.gitattributes
+    pager = delta
 [merge]
     conflictstyle = diff3
 [diff]
@@ -43,3 +44,11 @@
 [credential]
 # cd /usr/share/doc/git/contrib/credential/libsecret/; sudo make
 	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+
+# delta stuff: https://github.com/dandavison/delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true    # use n and N to move between diff sections
+[merge]
+    conflictstyle = zdiff3
