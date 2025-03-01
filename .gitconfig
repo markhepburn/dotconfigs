@@ -15,24 +15,46 @@
 [url "git@github.com:markhepburn/"]
     pushInsteadOf = https://github.com/markhepburn/
 
+[help]
+    autocorrect = prompt
+
+[init]
+    defaultBranch = main
+[branch]
+    sort = -committerdate
 # http://stevenharman.net/git-pull-with-automatic-rebase
-# [branch]
 #     autosetuprebase = always
+[tag]
+    sort = version:refname
 [pull]
     rebase = false              # default merge instead of rebase
 [push]
-    default = matching
+    default = simple
+    autoSetupRemote = true
+    followTags = true
+[fetch]
+    prune = true
+    pruneTags = true
+    all = true
 [include]
     path = ~/.gitconfig.private
+
+[column]
+    ui = auto
 
 [core]
     excludesfile = ~/.gitignore
     attributesfile = ~/.gitattributes
     pager = delta
+    fsmonitor = true
+    untrackedCache = true
 [merge]
     conflictstyle = diff3
 [diff]
+    algorithm = histogram
     colorMoved = default
+    mnemonicPrefix = true
+    renames = true
 [diff "common-lisp"]
     xfuncname="^\\((def\\S+\\s+\\S+)"
     
