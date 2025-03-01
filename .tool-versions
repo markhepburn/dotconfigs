@@ -5,10 +5,10 @@ ruby 2.5.0
 sbcl 2.1.4
 bazel 3.1.0
 direnv 2.28.0
-GoHugo 0.88.1
+hugo 0.88.1
 docker-compose 1.29.2
 jless 0.7.2
 awscli 2.4.27
 yarn 1.22.18
 maven 3.8.6
-R 4.2.2
+r 4.2.2
