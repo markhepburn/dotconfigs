@@ -200,4 +200,6 @@ export PATH
 . "$HOME/.cargo/env"
 
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+
+. "$HOME/.atuin/bin/env"
 eval "$(atuin init bash)"

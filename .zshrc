@@ -195,4 +195,5 @@ atuin-setup() {
     bindkey '^R' fzf-atuin-history-widget
 }
 # atuin-setup
+. "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh)"

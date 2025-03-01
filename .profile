@@ -33,3 +33,5 @@ export SSH_AUTH_SOCK=/run/user/$UID/keyring/ssh
 
 # for Emacs:
 export LD_LIBRARY_PATH=~/Projects/tree-sitter
+
+. "$HOME/.atuin/bin/env"
