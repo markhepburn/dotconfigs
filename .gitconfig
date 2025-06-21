@@ -43,6 +43,7 @@
     ui = auto
 
 [core]
+    autocrlf = input            # leaves LF on checkout, CRLF->LF on commit
     excludesfile = ~/.gitignore
     attributesfile = ~/.gitattributes
     pager = delta
