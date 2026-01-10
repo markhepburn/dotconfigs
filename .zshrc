@@ -62,6 +62,7 @@ plugins=(
     encode64
     extract
     fzf
+    fzf-marks                   # https://github.com/urbainvaes/fzf-marks
     git
     git-flow
     httpie
