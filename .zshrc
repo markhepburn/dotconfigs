@@ -224,3 +224,9 @@ atuin-setup() {
 # atuin-setup
 . "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh)"
+
+if [ -d "$HOME/Android/Sdk" ]; then
+    export ANDROID_HOME="$HOME/Android/Sdk" # Deprecated now
+    export ANDROID_SDK_ROOT="$ANDROID_HOME"
+    PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/emulator:$ANDROID_HOME/cmdline-tools/latest/bin
+fi
