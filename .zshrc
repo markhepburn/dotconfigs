@@ -66,6 +66,7 @@ plugins=(
     git
     git-flow
     httpie
+    jj
     jq                          # https://github.com/reegnz/jq-zsh-plugin
     knife
     lein
