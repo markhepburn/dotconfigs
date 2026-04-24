@@ -230,3 +230,43 @@ if [ -d "$HOME/Android/Sdk" ]; then
     export ANDROID_SDK_ROOT="$ANDROID_HOME"
     PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/emulator:$ANDROID_HOME/cmdline-tools/latest/bin
 fi
+
+function claude-sandbox() {
+  # 1. Create a persistent "hard drive" for the container if it doesn't exist
+  #    This stores the binary, your login, and your shell history.
+  podman volume inspect claude-home >/dev/null 2>&1 || podman volume create claude-home
+
+  # 2. Run the container
+  #    We use debian:bookworm-slim (lightweight, stable Linux)
+    # --network user \
+  podman run --rm -it \
+    --security-opt label=disable \
+    --cap-drop ALL \
+    -v "$(pwd)":/workspace:z \
+    -v claude-home:/root \
+    -w /workspace \
+    buildpack-deps:bookworm-scm \
+    /bin/bash -c "
+      # A. Check if Claude is installed in the persistent volume
+      if [ ! -f /root/.local/bin/claude ]; then
+        echo 'Initializing AI Sandbox (Running first-time setup)...'
+        mkdir -p /root/.local/bin
+        # Install the native binary
+        curl -fsSL https://claude.ai/install.sh | bash
+        # Ensure it is executable
+        chmod +x /root/.local/bin/claude
+      fi
+
+      # B. Add to PATH explicitly (in case the shell doesn't pick it up immediately)
+      export PATH=\$PATH:/root/.local/bin
+
+      # C. Handle arguments
+      if [ -z \"\$1\" ]; then
+         # If no args, run the tool interactively
+         exec claude
+      else
+         # Otherwise run the command passed (e.g., 'claude --version' or 'bash')
+         exec \"\$@\"
+      fi
+    " -- "$@"
+}
