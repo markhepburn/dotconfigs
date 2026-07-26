@@ -54,7 +54,6 @@ alias mkvirtualenv3="mkvirtualenv --python=`which python3`"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
     aws
-    asdf
     command-not-found
     direnv
     docker
@@ -68,7 +67,6 @@ plugins=(
     httpie
     jj
     jq                          # https://github.com/reegnz/jq-zsh-plugin
-    knife
     lein
     mise
     mix
@@ -79,8 +77,8 @@ plugins=(
     thefuck
     uv
     vagrant
-    virtualenv
-    virtualenvwrapper
+    # virtualenv  # I think the display is handled by p10k now
+    # virtualenvwrapper  # mostly use uv-venv in local directory now
     # zsh-aliases-exa
     zsh-aliases-lsd
 )
