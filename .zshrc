@@ -242,31 +242,28 @@ function claude-sandbox() {
   podman run --rm -it \
     --security-opt label=disable \
     --cap-drop ALL \
-    -v "$(pwd)":/workspace:z \
+    -e HOME=/root \
+    --userns=keep-id \
+    -v "$(pwd)":/workspace \
     -v claude-home:/root \
     -w /workspace \
     buildpack-deps:bookworm-scm \
-    /bin/bash -c "
-      # A. Check if Claude is installed in the persistent volume
-      if [ ! -f /root/.local/bin/claude ]; then
-        echo 'Initializing AI Sandbox (Running first-time setup)...'
-        mkdir -p /root/.local/bin
-        # Install the native binary
+    /bin/bash -c '
+      export PATH="$PATH:$HOME/.local/bin"
+
+      if [ ! -x "$HOME/.local/bin/claude" ]; then
+        echo "Initializing AI Sandbox (running first-time setup)..."
+        mkdir -p "$HOME/.local/bin"
         curl -fsSL https://claude.ai/install.sh | bash
-        # Ensure it is executable
-        chmod +x /root/.local/bin/claude
       fi
 
-      # B. Add to PATH explicitly (in case the shell doesn't pick it up immediately)
-      export PATH=\$PATH:/root/.local/bin
-
-      # C. Handle arguments
-      if [ -z \"\$1\" ]; then
-         # If no args, run the tool interactively
-         exec claude
+      if [ $# -eq 0 ]; then
+        exec claude
+      elif [ "${1#-}" != "$1" ]; then
+        # first arg starts with '-': treat args as claude flags
+        exec claude "$@"
       else
-         # Otherwise run the command passed (e.g., 'claude --version' or 'bash')
-         exec \"\$@\"
+        exec "$@"
       fi
-    " -- "$@"
+    ' -- "$@"
 }
