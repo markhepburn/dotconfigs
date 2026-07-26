@@ -62,6 +62,7 @@ plugins=(
     extract
     fzf
     fzf-marks                   # https://github.com/urbainvaes/fzf-marks
+    gh
     git
     git-flow
     httpie
