@@ -266,3 +266,37 @@ function claude-sandbox() {
       fi
     ' -- "$@"
 }
+
+
+# Auto-activate a uv/.venv virtualenv on cd, deactivate on leaving.
+autoload -Uz add-zsh-hook
+
+_auto_venv() {
+  local dir=$PWD venv=
+
+  # walk up from $PWD looking for a .venv
+  while true; do
+    if [[ -f $dir/.venv/bin/activate ]]; then
+      venv=$dir/.venv
+      break
+    fi
+    [[ $dir == / ]] && break
+    dir=${dir:h}
+  done
+
+  if [[ -n $venv ]]; then
+    if [[ $VIRTUAL_ENV != $venv ]]; then
+      # switch away from any previously active venv first
+      (( $+functions[deactivate] )) && deactivate
+      source $venv/bin/activate
+      _AUTO_VENV_ACTIVE=$venv
+    fi
+  elif [[ -n $_AUTO_VENV_ACTIVE && $VIRTUAL_ENV == $_AUTO_VENV_ACTIVE ]]; then
+    # only deactivate venvs that we auto-activated
+    (( $+functions[deactivate] )) && deactivate
+    unset _AUTO_VENV_ACTIVE
+  fi
+}
+
+add-zsh-hook chpwd _auto_venv
+_auto_venv  # also check the directory the shell starts in
