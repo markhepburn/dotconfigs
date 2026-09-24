@@ -1,0 +1,23 @@
+[tools]
+node = "22"
+awscli = "latest"
+go = "latest"
+"go:github.com/google/osv-scanner/cmd/osv-scanner" = "v1"
+erlang = "latest"
+elixir = "latest"
+"cargo:zizmor" = "latest"
+"github:dirge-code/dirge" = "latest"
+"github:PHPantom-dev/phpantom_lsp" = "latest"
+"github:anomalyco/opencode" = "latest"
+pinact = "latest"
+"aqua:lindell/multi-gitter" = "latest"
+usage = "latest"
+antigravity-cli = "latest"
+yarn = "1"
+"go:golang.org/x/tools/gopls" = "latest"
+syft = "latest"
+duckdb = "latest"
+jj = "latest"
+
+[settings]
+experimental = true
